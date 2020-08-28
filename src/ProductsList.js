@@ -1,6 +1,9 @@
 import React, {
-  Component
+  Component,
+  Icon,
+  Link,
 } from "react";
+import map from 'lodash/map'
 import ProductsService from "./ProductsService";
 const productsService = new ProductsService();
 
@@ -49,29 +52,15 @@ class ProductsList extends Component {
   render() {
     return (
       <div className="products--list">
-        <table className="table">
-          <thead key="thead">
-            <tr>
-              <th>#</th>
-              <th>Наименование</th>
-              <th>Цена (в рублях)</th>
-              <th>Описание</th>
-            </tr>
-          </thead>
-          <tbody>
+        <div className="items">
             {this.state.products.map((c) => (
-              <tr key={c.pk}>
-                <td>{c.pk} </td>
-                <td>{c.name}</td>
-                <td>{c.price}</td>
-                <td>{c.specification}</td>
-                <td>
-                  <a href={"/products/" + c.pk}>Детально</a>
-                </td>
-              </tr>
+              <div key={c.pk} className="item">
+                <div>{c.name}</div>
+                <div>{c.price}</div>
+                <div>{c.specification}</div>
+              </div>
             ))}
-          </tbody>
-        </table>
+        </div>
         <button className="btn btn-primary" onClick={this.prevPage}>
           Предыдущая страница
         </button>
