@@ -1,9 +1,8 @@
 import React, {
   Component,
-  Icon,
-  Link,
 } from "react";
-import map from 'lodash/map'
+import { Icon } from 'react-materialize';
+import { Link } from 'react-router-dom';
 import ProductsService from "./ProductsService";
 const productsService = new ProductsService();
 
@@ -55,9 +54,19 @@ class ProductsList extends Component {
         <div className="items">
             {this.state.products.map((c) => (
               <div key={c.pk} className="item">
-                <div>{c.name}</div>
-                <div>{c.price}</div>
-                <div>{c.specification}</div>
+                <Link to={`/products/${c.pk}`}>
+                <div className="product-img">
+                  <img alt={c.name} src={c.image} />
+                </div>
+                <div className="product-details">
+                  <h1 id="product-name">{c.name}</h1>  
+                  <h4 id="product-description">{c.specification}</h4>
+                </div>
+                </Link>
+                <div className="price-add">
+                  <h5 id="product-price">{c.price}₽</h5>
+                  <Icon small id="add-icon">add_shopping_cart</Icon>
+                </div>
               </div>
             ))}
         </div>
