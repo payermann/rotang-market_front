@@ -18,6 +18,7 @@ class ProductDetail extends Component {
         this.refs.name.value = c.name;
         this.refs.price.value = c.price;
         this.refs.specification.value = c.specification;
+        this.refs.image.value = c.image;
       });
     }
   }

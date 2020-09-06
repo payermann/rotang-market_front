@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
   }
   
   .items-title {
@@ -32,9 +32,17 @@
   a {
     color: black;
   }
-  
-  img {
+
+  .product-img {
     height: 20em;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .btn {
+    margin: .5em;
   }
   
   #product-name {
@@ -57,6 +65,10 @@
     font-size: 1em;
   }
   
+  #NavigationPanel {
+    text-align: center;
+  }
+
   .price-add {
     display: flex;
     justify-content: space-between;

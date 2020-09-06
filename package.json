@@ -6,9 +6,10 @@
     "axios": "*",
     "react": "*",
     "react-dom": "*",
-    "react-materialize": "*",
     "react-router-dom": "*",
-    "react-scripts": "*"
+    "react-scripts": "*",
+    "@material-ui/core": "*",
+    "@material-ui/icons": "*"
   },
   "devDependencies": {},
   "scripts": {
