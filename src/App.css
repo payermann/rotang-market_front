@@ -1,94 +1,94 @@
-@import  'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
 
 .items-wrapper {
-    border-top: 4px solid black;
-  }
-  
-  .item {
-    height: 30em;
-    width: 20em;
-    font-family: 'Quicksand', sans-serif;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    margin: .5em;
-    padding: 1em;
-    background-color: white;
-    transition: transform 300ms bounce;
-  }
-  
-  .items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .items-title {
-    text-align: center;
-  }
-  
-  a {
-    color: black;
-  }
+  border-top: 4px solid black;
+}
 
-  .product-img {
-    height: 20em;
-  }
+.item {
+  height: 30em;
+  width: 20em;
+  font-family: "Quicksand", sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+  padding: 1em;
+  background-color: white;
+  transition: transform 300ms bounce;
+}
 
-  img {
-    width: 100%;
-  }
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-  .btn {
-    margin: .5em;
-  }
-  
-  #product-name {
-    border-top: 1px solid lightgrey;
-    padding: 1em 0 0;
-    font-size: 1.5em;
-    font-family: 'Lato', sans-serif;
-    margin: .5em 0;
-  }
-  
-  #product-description {
-    font-size: 1em;
-    font-family: 'Lato', sans-serif;
-    color: grey;
-    font-weight: lighter;
-    margin: 0;
-  }
-  
-  #product-price {
-    font-size: 1em;
-  }
-  
-  #NavigationPanel {
-    text-align: center;
-  }
+.items-title {
+  text-align: center;
+}
 
-  .price-add {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  i {
-    color: lightgrey;
-    transition: 0.5s;
-  }
-  
-  i:hover {
-    color: grey;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-  
-  .items-title {
-    margin: 3em 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: lighter;
-    color: rgba(0, 0, 0, 0.8);
-    text-transform: uppercase;
-  }
+a {
+  color: black;
+}
+
+.product-img {
+  height: 20em;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  margin: 0.5em;
+}
+
+#product-name {
+  border-top: 1px solid lightgrey;
+  padding: 1em 0 0;
+  font-size: 1.5em;
+  font-family: "Lato", sans-serif;
+  margin: 0.5em 0;
+}
+
+#product-description {
+  font-size: 1em;
+  font-family: "Lato", sans-serif;
+  color: grey;
+  font-weight: lighter;
+  margin: 0;
+}
+
+#product-price {
+  font-size: 1em;
+}
+
+#NavigationPanel {
+  text-align: center;
+}
+
+.price-add {
+  display: flex;
+  justify-content: space-between;
+}
+
+i {
+  color: lightgrey;
+  transition: 0.5s;
+}
+
+i:hover {
+  color: grey;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.items-title {
+  margin: 3em 0;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+}
