@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import IconButton from "@material-ui/core/IconButton";
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { Link } from "react-router-dom";
 import ProductsService from "./ProductsService";
@@ -75,10 +75,10 @@ class ProductsList extends Component {
         </div>
         <div id="NavigationPanel">
           <button className="btn btn-primary" onClick={this.prevPage}>
-            <ArrowBackIcon/>
+            <ArrowBackIcon />
           </button>
           <button className="btn btn-primary" onClick={this.nextPage}>
-            <ArrowForwardIcon/>
+            <ArrowForwardIcon />
           </button>
         </div>
       </div>
