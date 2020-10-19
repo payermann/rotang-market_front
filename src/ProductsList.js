@@ -5,6 +5,7 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { Link } from "react-router-dom";
 import ProductsService from "./ProductsService";
+import {addCart} from "./Cart.js";
 const productsService = new ProductsService();
 
 class ProductsList extends Component {
@@ -67,7 +68,9 @@ class ProductsList extends Component {
               <div className="price-add">
                 <h5 id="product-price">{c.price}₽</h5>
                 <IconButton color="primary" aria-label="add to shopping cart">
-                  <AddShoppingCartIcon />
+                  <AddShoppingCartIcon
+                    onClick={addCart.bind(this, c.pk)}
+                  />
                 </IconButton>
               </div>
             </div>

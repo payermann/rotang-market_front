@@ -92,3 +92,15 @@ i:hover {
   color: rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
 }
+
+.itemsMain {
+  display: flex;
+  margin: 3em 0;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.textMain {
+  margin: 2em;
+}
