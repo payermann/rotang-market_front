@@ -33,7 +33,6 @@ class Cart extends Component {
             result.data["cart"][result.data["data"][prop]["pk"]];
           vrprice += vr[prop]["kol"] * vr[prop]["price"];
         }
-        console.log(vr);
         self.setState({
           products: vr,
           allprice: vrprice,
