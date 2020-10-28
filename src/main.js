@@ -7,7 +7,7 @@ class Main extends Component {
         <div>
           <img
             src={
-              "https://hhcdn.ru/photo/483441959.jpeg?t=1602857256&h=NL2q3kvv1QyxxnFlRSEtQQ"
+              "http://13.94.114.133:8000/media/myphoto.jpeg"
             }
           />
         </div>
