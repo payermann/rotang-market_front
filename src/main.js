@@ -5,11 +5,7 @@ class Main extends Component {
     return (
       <div className="itemsMain">
         <div>
-          <img
-            src={
-              "http://13.94.114.133:8000/media/myphoto.jpeg"
-            }
-          />
+          <img src={"http://13.94.114.133:8000/media/myphoto.jpeg"} />
         </div>
         <div className="textMain">
           <h1>Добро пожаловать на мой сайт-презентацию.</h1>
@@ -20,6 +16,7 @@ class Main extends Component {
             написано на библиотеке js react, nginx используется в качестве
             прокси-сервера. API построен с использованием библиотеки
             djangorestframework. PostgreSQL используется в качестве базы данных.
+            <br />Мой <ins><a href="mailto:payermann@yandex.ru">email</a></ins> для связи.
           </p>
         </div>
       </div>
