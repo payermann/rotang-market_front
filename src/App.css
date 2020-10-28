@@ -104,3 +104,9 @@ i:hover {
 .textMain {
   margin: 2em;
 }
+
+.CartItemsNumber {
+  border-radius: 25%;
+  background-color: rgba(63, 81, 181, 0.3);
+  font-size: .8em;
+}

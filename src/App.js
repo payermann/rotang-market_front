@@ -18,6 +18,7 @@ const BaseLayout = () => (
         Магазин мебели
       </a>
       <a href="/cart/">
+        <num className="CartItemsNumber">{}</num>
         <ShoppingCartIcon />
       </a>
     </nav>
