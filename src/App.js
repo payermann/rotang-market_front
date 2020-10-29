@@ -11,16 +11,16 @@ import Main from "./main";
 const BaseLayout = () => (
   <div className="container-fluid">
     <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-      <a className="navbar-brand" href="/">
+      <Link className="navbar-brand" to="/">
         Приветствие
-      </a>
-      <a className="navbar-brand" href="/products/">
+      </Link>
+      <Link className="navbar-brand" to="/products/">
         Магазин мебели
-      </a>
-      <a href="/cart/">
+      </Link>
+      <Link to="/cart/">
         <num className="CartItemsNumber">{}</num>
         <ShoppingCartIcon />
-      </a>
+      </Link>
     </nav>
     <div className="content">
       <Route path="/" exact component={Main} />
