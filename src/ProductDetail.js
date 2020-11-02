@@ -46,8 +46,8 @@ class ProductDetail extends Component {
         </div>
         <div className="price-add">
           <h5 id="product-price">{this.state.price}₽</h5>
-          <IconButton color="primary" aria-label="add to shopping cart">
-            <AddShoppingCartIcon onClick={addCart.bind(this, this.state.pk)} />
+          <IconButton onClick={addCart.bind(this, this.state.pk)} color="primary" aria-label="add to shopping cart">
+            <AddShoppingCartIcon />
           </IconButton>
         </div>
       </div>

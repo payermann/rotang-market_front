@@ -67,10 +67,8 @@ class ProductsList extends Component {
               </Link>
               <div className="price-add">
                 <h5 id="product-price">{c.price}₽</h5>
-                <IconButton color="primary" aria-label="add to shopping cart">
-                  <AddShoppingCartIcon
-                    onClick={addCart.bind(this, c.pk)}
-                  />
+                <IconButton onClick={addCart.bind(this, c.pk)} color="primary" aria-label="add to shopping cart">
+                  <AddShoppingCartIcon />
                 </IconButton>
               </div>
             </div>
