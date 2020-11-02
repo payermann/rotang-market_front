@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProductsService from "./ProductsService";
+import { Link } from "react-router-dom";
 const productsService = new ProductsService();
 
 export function addCart(pk) {
@@ -90,7 +91,7 @@ class Cart extends Component {
                   <td>{c.price * c.kol}</td>
                   <td>{c.specification}</td>
                   <td>
-                    <a href={"/products/" + c.pk}>Детально</a>
+                    <Link to={"/products/" + c.pk}>Детально</Link>
                     <button
                       className="btn btn-primary"
                       onClick={this.deleteFromCart.bind(this, c.pk)}
