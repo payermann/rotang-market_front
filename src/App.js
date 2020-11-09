@@ -14,6 +14,9 @@ const BaseLayout = () => (
       <Link className="navbar-brand" to="/">
         Приветствие
       </Link>
+      <a href="http://13.94.114.133:8000/">
+        Чат
+      </a>
       <Link className="navbar-brand" to="/products/">
         Магазин мебели
       </Link>
