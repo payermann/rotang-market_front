@@ -16,6 +16,7 @@ class Main extends Component {
             написано на библиотеке js react, nginx используется в качестве
             прокси-сервера. API построен с использованием библиотеки
             djangorestframework. PostgreSQL используется в качестве базы данных.
+            В чате использованы Channels и Redis. 
             <br />Мой <ins><a href="mailto:payermann@yandex.ru">email</a></ins> для связи.
           </p>
         </div>
