@@ -1,32 +1,17 @@
-# base image
-FROM node:12.2.0-alpine as builder
-# copy the package.json to install dependencies
-COPY package.json ./
-
-# Install the dependencies and make the folder
-RUN npm install && mkdir /app && mv ./node_modules ./app
-
+# build environment
+FROM node:13.12.0-alpine as build
+RUN apk add --update nodejs npm
 WORKDIR /app
-
-COPY . .
-
-# Build the project and copy the files
+ENV PATH /app/node_modules/.bin:$PATH
+COPY package.json ./
+RUN  npm install
+RUN npm install react-scripts -g
+COPY . ./
 RUN npm run build
 
-
-
-FROM nginx:alpine
-
-#!/bin/sh
-
+# production environment
+FROM nginx:stable-alpine
 COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
-
-## Remove default nginx index page
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy from the stahg 1
-COPY --from=builder /app/build /usr/share/nginx/html
-
+COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 80
-
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
