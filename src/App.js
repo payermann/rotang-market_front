@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import ProductsList from "./ProductsList";
 import "./App.css";
 import ProductDetail from "./ProductDetail";
@@ -26,18 +26,29 @@ const BaseLayout = () => (
       </Link>
     </nav>
     <div className="content">
-      <Route path="/" exact component={Main} />
-      <Route path="/products/" exact component={ProductsList} />
-      <Route path="/products/:pk" component={ProductDetail} />
-      <Route path="/cart/" exact component={Cart} />
+      {/* <Routes>
+        <Route path="/" exact component={Main} />
+        <Route path="/products/" exact component={ProductsList} />
+        <Route path="/products/:pk" component={ProductDetail} />
+        <Route path="/cart/" exact component={Cart} />
+      </Routes> */}
     </div>
   </div>
 );
 class App extends Component {
   render() {
     return (
+      // <BrowserRouter>
+      //   <BaseLayout />
+      // </BrowserRouter>
       <BrowserRouter>
         <BaseLayout />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/products/" element={<ProductsList />} />
+            <Route path="/products/:pk" element={<ProductDetail />} />
+            <Route path="/cart/" element={<Cart />} />
+          </Routes>
       </BrowserRouter>
     );
   }

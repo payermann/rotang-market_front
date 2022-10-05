@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "http://13.94.114.133:8000";
+const API_URL = "http://127.0.0.1:8000";
 
 export default class ProductsService {
   constructor() {}
