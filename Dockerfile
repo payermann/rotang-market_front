@@ -1,12 +1,14 @@
 # build environment
-FROM node:13.12.0-alpine as build
-RUN apk add --update nodejs npm
+FROM node:alpine as build
+# RUN apk add --update nodejs npm
 WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
-RUN  npm install
-RUN npm install react-scripts -g
-COPY . ./
+RUN npm install
+# RUN mkdir /app && mv ./node_modules ./app
+COPY . .
+# ENV PATH /app/node_modules/.bin:$PATH
+# RUN npm install create-react-app
+# RUN npx create-react-app front
 RUN npm run build
 
 # production environment
